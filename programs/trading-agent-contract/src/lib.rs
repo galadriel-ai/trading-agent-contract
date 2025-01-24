@@ -6,7 +6,7 @@ declare_id!("H5CtT4c2mmkcwSAWc4nWTFXjD9bQGgcag57WEwrucLwQ");
 const DISCRIMINATOR_SIZE: usize = 8;
 
 #[program]
-pub mod solana_attestation_contract {
+pub mod trading_agent_contract {
 
     use super::*;
 
@@ -23,9 +23,9 @@ pub mod solana_attestation_contract {
         ctx: Context<RequestTrading>, 
         args: RequestTradingArgs
     ) -> Result<()> {
-        let agent_data = &ctx.accounts.agent_data;
+        let _agent_data = &ctx.accounts.agent_data;
 
-        let signer = ctx.accounts.signer.key();
+        let _signer = ctx.accounts.signer.key();
 
         // Concatenate the trading data and calculate the hash
         let mut data = Vec::new();
